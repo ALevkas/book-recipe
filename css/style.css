@@ -47,6 +47,7 @@
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 1em;
+  margin: 1em;
 }
 
 .home-banner__title {
@@ -95,6 +96,7 @@
           justify-content: center;
   text-align: center;
   gap: 1em;
+  margin: 1em;
 }
 
 .home-categories-item {
@@ -147,6 +149,26 @@
   .home-categories {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+    padding: 2em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+  .home {
+    -ms-grid-rows: 100px 2fr 1fr;
+        grid-template-rows: 100px 2fr 1fr;
+  }
+  .home-banner {
+    border-radius: 1em;
+    justify-items: center;
+    text-align: center;
+  }
+  .home-banner__title {
+    font-size: 2rem;
+  }
+  .home-categories {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     padding: 2em;
   }
 }
