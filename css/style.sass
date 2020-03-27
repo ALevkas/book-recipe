@@ -1,0 +1,70 @@
+
+@import "vars"
+
+.home
+    .links
+        text-decoration: none
+        color: #ffffff
+        &:hover
+            color: $hover_links
+            transition: 0.5s
+
+.home
+    height: 100vh
+    grid-template-rows: 100px repeat(2, 1fr)
+    &-banner
+        align-items: center
+        background: $gradient_home, url("../img/noodletitle.jpg")
+        background-position: center
+        background-size: cover
+        border-radius: 2em
+        grid-row-start: 2
+        grid-template-rows: repeat(3, 1fr)
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+        padding: 1em
+        &__title
+            font-size: 2.5rem
+            grid-row-start: 1
+        &__subtitle
+            font-size: 1.3rem
+            grid-row-start: 2
+            grid-template-columns: repeat(auto-fit, minmax(250px, 350px))
+        &__buttons
+            font-size: 1rem
+            grid-row-start: 3
+            .links
+                background: gray
+                border-radius: 1em
+                padding: 1em
+                &:hover
+                    color: $white
+                    background: $hover_links
+    &-categories
+        grid-row-start: 3
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        align-items: center
+        justify-content: center
+        text-align: center
+        gap: 1em
+        &-item
+            margin-bottom: 1em
+            &-links
+                text-decoration: none
+                color: #fff
+                &-img
+                    background: $gradient_home, url("../img/frying.jpg")
+                    background-position: center
+                    background-size: cover
+                    border-radius: 2em
+                    &-title
+                        display: grid
+                        align-items: center
+                        height: 250px
+                        font-size: 1.5rem
+                &-img:hover
+                    background: $hover_links_img, url("../img/frying.jpg")
+                    background-position: center
+                    background-size: cover
+
+@import "media"

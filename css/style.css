@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.main-container {
+  max-width: 1276px;
+  margin: 0 auto;
+}
+
+.home .links {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.home .links:hover {
+  color: #ffa000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.home {
+  height: 100vh;
+  -ms-grid-rows: 100px (1fr)[2];
+      grid-template-rows: 100px repeat(2, 1fr);
+}
+
+.home-banner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/noodletitle.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/noodletitle.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 2em;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 1em;
+}
+
+.home-banner__title {
+  font-size: 2.5rem;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+}
+
+.home-banner__subtitle {
+  font-size: 1.3rem;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-columns: (minmax(250px, 350px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+}
+
+.home-banner__buttons {
+  font-size: 1rem;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+}
+
+.home-banner__buttons .links {
+  background: gray;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.home-banner__buttons .links:hover {
+  color: #ffffff;
+  background: #ffa000;
+}
+
+.home-categories {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  gap: 1em;
+}
+
+.home-categories-item {
+  margin-bottom: 1em;
+}
+
+.home-categories-item-links {
+  text-decoration: none;
+  color: #fff;
+}
+
+.home-categories-item-links-img {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/frying.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/frying.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 2em;
+}
+
+.home-categories-item-links-img-title {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 250px;
+  font-size: 1.5rem;
+}
+
+.home-categories-item-links-img:hover {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 160, 0, 0.4)), to(rgba(255, 160, 0, 0.4))), url("../img/frying.jpg");
+  background: linear-gradient(to right, rgba(255, 160, 0, 0.4), rgba(255, 160, 0, 0.4)), url("../img/frying.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .home {
+    -ms-grid-rows: 100px 2fr 1fr;
+        grid-template-rows: 100px 2fr 1fr;
+  }
+  .home-banner {
+    border-radius: 0em;
+    justify-items: center;
+    text-align: center;
+  }
+  .home-banner__title {
+    font-size: 2rem;
+  }
+  .home-categories {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    padding: 2em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

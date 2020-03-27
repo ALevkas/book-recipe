@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe book</title>
+
+    <!-- style connect -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <main class="main">
+        <div class="main-container">
+            <section class="home grid">
+                <div class="home-banner grid">
+                    <div class="home-banner__title">
+                        <a class="links" href="#">Книга твоих рецептов</a>
+                    </div>
+                    <div class="home-banner__subtitle">
+                        <a class="links" href="#"><span id="countRecipe">0</span> <span id="recipeTitle">рецептов</span> в базе</a>
+                    </div>
+                    <div class="home-banner__buttons">
+                        <a class="links" href="#">Открыть все рецепты</a>
+                    </div>
+                </div>
+                <div class="home-categories">
+                    <div class="home-categories-item">
+                        <a class="home-categories-item-links" href="categoires-list.html?categories=potato">
+                            <div class="home-categories-item-links-img">
+                                <div class="home-categories-item-links-img-title">
+                                    <h3>Картошка</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="home-categories-item">
+                        <a class="home-categories-item-links" href="categoires-list.html?categories=pasta">
+                            <div class="home-categories-item-links-img">
+                                <div class="home-categories-item-links-img-title">
+                                    <h3>Макароны</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="home-categories-item">
+                        <a class="home-categories-item-links" href="categoires-list.html?categories=porridge">
+                            <div class="home-categories-item-links-img">
+                                <div class="home-categories-item-links-img-title">
+                                    <h3>Каши</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="home-categories-item">
+                        <a class="home-categories-item-links" href="categoires-list.html?categories=Soups">
+                            <div class="home-categories-item-links-img">
+                                <div class="home-categories-item-links-img-title">
+                                    <h3>Супы</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="home-categories-item">
+                        <a class="home-categories-item-links" href="categoires-list.html?categories=Salads">
+                            <div class="home-categories-item-links-img">
+                                <div class="home-categories-item-links-img-title">
+                                    <h3>Салаты</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+
+
+    <!-- firebase connect-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDWz86D-2Oy8FVbOuh1l-ThsEgcEf8amC8",
+            authDomain: "recipe-6ae45.firebaseapp.com",
+            databaseURL: "https://recipe-6ae45.firebaseio.com",
+            projectId: "recipe-6ae45",
+            storageBucket: "recipe-6ae45.appspot.com",
+            messagingSenderId: "664801958745",
+            appId: "1:664801958745:web:bcfcf4fb7899569c658a48",
+            measurementId: "G-QB0XXMR262"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="./scripts/script.js"></script>
+
+</body>
+
+</html>

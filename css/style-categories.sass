@@ -1,0 +1,48 @@
+@import "vars"
+
+.categories
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: 100px 1fr 2fr
+    &-header
+        grid-row-start: 2
+        &__title
+            font-size: 18px
+            font-weight: 600
+            margin: 0
+            color: #333333
+        &__subtitle
+            font-weight: 400
+            line-height: 19.5pt
+            color: #323c41
+            text-decoration: none
+    &-body
+        grid-row-start: 3
+        grid-template-columns: repeat(5, 1fr)
+        gap: 3em
+        &-item
+            grid-template-rows: 1fr repeat(3, 0.3fr)
+            background: #ebece9
+            text-align: center
+            border-radius: 1.5em
+            overflow: hidden
+            &-link
+                text-decoration: none
+                color: #333333
+                &__image
+                    width: 100%
+                    height: 200px
+                    background-image: url("../img/ci1.jpg")
+                    background-position: center center
+                    background-size: cover
+                &__name
+                    margin-top: 1em
+                    font-size: 1rem
+                    font-weight: 700
+                &__author
+                    margin-top: .5em
+                    font-size: .8rem
+                &__rating
+                    margin-top: .5em
+                    margin-bottom: 1em
+
+@import "media-categories"

@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.main-container {
+  max-width: 1276px;
+  margin: 0 auto;
+}
+
+.categories {
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-rows: 100px 1fr 2fr;
+      grid-template-rows: 100px 1fr 2fr;
+}
+
+.categories-header {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+}
+
+.categories-header__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #333333;
+}
+
+.categories-header__subtitle {
+  font-weight: 400;
+  line-height: 19.5pt;
+  color: #323c41;
+  text-decoration: none;
+}
+
+.categories-body {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 3em;
+}
+
+.categories-body-item {
+  -ms-grid-rows: 1fr (0.3fr)[3];
+      grid-template-rows: 1fr repeat(3, 0.3fr);
+  background: #ebece9;
+  text-align: center;
+  border-radius: 1.5em;
+  overflow: hidden;
+}
+
+.categories-body-item-link {
+  text-decoration: none;
+  color: #333333;
+}
+
+.categories-body-item-link__image {
+  width: 100%;
+  height: 200px;
+  background-image: url("../img/ci1.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+.categories-body-item-link__name {
+  margin-top: 1em;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.categories-body-item-link__author {
+  margin-top: .5em;
+  font-size: .8rem;
+}
+
+.categories-body-item-link__rating {
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 768px) {
+  .categories {
+    padding: 3em;
+    -ms-grid-rows: 150px 1fr;
+        grid-template-rows: 150px 1fr;
+  }
+  .categories-header {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .categories-body {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*# sourceMappingURL=style-categories.css.map */
